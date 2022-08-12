@@ -17,6 +17,7 @@ UsersRouter.post("/login", passport.authenticate("local"), (req, res) => {
     return res.send(req.user);
   });
 });
+
 UsersRouter.post("/logout", (req, res, next) => {
   console.log("entrando al logout");
   req.logout(function (err) {
