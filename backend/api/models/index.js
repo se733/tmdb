@@ -1,3 +1,3 @@
 const Users = require("./Users");
 
-module.exports = {Users};
+module.exports = Users;

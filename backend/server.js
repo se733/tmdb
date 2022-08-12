@@ -6,6 +6,9 @@ const volleyball = require('volleyball');
 const cors = require('cors')
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const Users = require("./api/models/Users")
+const routes = require('./api/routes')
+const models = require('./api/models/index')
 
 
 
@@ -68,7 +71,7 @@ passport.serializeUser(function (user, done) {
 
 
 
-//   app.use('/api', routes);
+  app.use('/api', routes);
 
   const port = 3001;
   
@@ -79,4 +82,3 @@ passport.serializeUser(function (user, done) {
       });
     })
     .catch((error) => console.log("Error: ", error));
-  
